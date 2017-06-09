@@ -22,20 +22,20 @@
 
   'exportFunction':
     'prefix': 'exf'
-    'body': 'export function ${1:functionName}() {\n\t\n}\n'
+    'body': 'export function ${1:functionName}() {\n\t${2:code}\n}\n'
 
 
   'exportDefaultFunction':
     'prefix': 'exdf'
-    'body': 'export default function ${1:functionName}() {\n\t\n}\n'
+    'body': 'export default function ${1:functionName}() {\n\t${2:code}\n}\n'
 
   'exportClass':
     'prefix': 'expc'
-    'body': 'export default class ${1:className}() {\n\t\n}\n'
+    'body': 'export default class ${1:className}() {\n\t${2:code}\n}\n'
 
   'exportClassExtends':
     'prefix': 'expec'
-    'body': 'export default class ${1:className} extends ${2:baseClass}() {\n\t\n}\n'
+    'body': 'export default class ${1:className} extends ${2:baseClass}() {\n\t${3:code}\n}\n'
 
   'exportReactClassExtends':
     'prefix': 'expreact'
@@ -94,4 +94,4 @@
     'body': 'function* ${1:functionName}() {\n\t yield ${2:code} \n\t\n}\n'
   'newpromise':
     'prefix': 'newpromise'
-    'body': 'new Promise((resolve, reject) => {\n\t$1\n})'
+    'body': 'new Promise((resolve, reject) => {\n\t${1:code}\n})'
