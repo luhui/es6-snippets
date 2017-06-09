@@ -92,6 +92,19 @@
   'generator':
     'prefix': 'gen'
     'body': 'function* ${1:functionName}() {\n\t yield ${2:code} \n\t\n}\n'
-  'newpromise':
+    
+  'new promise':
     'prefix': 'newpromise'
     'body': 'new Promise((resolve, reject) => {\n\t${1:code}\n})'
+
+  'console.log':
+    'prefix': 'logv'
+    'body': 'console.log($1)'
+
+  'console.error':
+    'prefix': 'loge'
+    'body': 'console.error($1)'
+
+  'console.warn':
+    'prefix': 'logw'
+    'body': 'console.warn($1)'
