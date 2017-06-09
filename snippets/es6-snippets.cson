@@ -2,23 +2,23 @@
 
   'import':
     'prefix': 'imp'
-    'body': 'import $1 from ${2:"module-name"}'
+    'body': 'import $1 from \'${2:module-name}\''
 
   'importAs':
     'prefix': 'impas'
-    'body': 'import ${1:name} as ${2:alias} from ${3:"module-name"}'
+    'body': 'import ${1:name} as ${2:alias} from \'${3:module-name}\''
 
   'importMember':
    'prefix': 'impm'
-   'body': 'import {${1:member}} from ${2:"module-name"}'
+   'body': 'import {${1:member}} from \'${2:module-name}\''
 
   'importMemberAsAlias':
    'prefix': 'impmas'
-   'body': 'import {${1:member} as ${2:alias}} from ${3:"module-name"}'
+   'body': 'import {${1:member} as ${2:alias}} from \'${3:module-name}\''
 
    'importAll':
      'prefix': 'imp*'
-     'body': 'import * as ${1:alias} from ${2:"module-name"}'
+     'body': 'import * as ${1:alias} from \'${2:module-name}\''
 
 
   'exportFunction':
