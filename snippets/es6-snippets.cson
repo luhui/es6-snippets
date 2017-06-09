@@ -20,7 +20,6 @@
      'prefix': 'imp*'
      'body': 'import * as ${1:alias} from \'${2:module-name}\''
 
-
   'exportFunction':
     'prefix': 'exf'
     'body': 'export function ${1:functionName}() {\n\t\n}\n'
@@ -31,40 +30,44 @@
     'body': 'export default function ${1:functionName}() {\n\t\n}\n'
 
   'exportClass':
-    'prefix': 'exc'
+    'prefix': 'expc'
     'body': 'export default class ${1:className}() {\n\t\n}\n'
 
   'exportClassExtends':
-    'prefix': 'exec'
+    'prefix': 'expec'
     'body': 'export default class ${1:className} extends ${2:baseClass}() {\n\t\n}\n'
+
+  'exportReactClassExtends':
+    'prefix': 'expreact'
+    'body': 'export default class ${1:className} extends ${2:Component}() {\n\t${3:code}\n}\n'
 
   'constructor':
     'prefix': 'con'
-    'body': 'constructor (${1:params}) {\n\t\n}\n'
+    'body': 'constructor(props:${1:Props}) {\n\t${2:initial}\n}\n'
 
   'method':
     'prefix': 'meth'
-    'body': '${1:methodName} (${2:params}) {\n\t\n}\n'
+    'body': '${1:methodName}(${2:params}) {\n\t${3:code}\n}\n'
 
   'get':
     'prefix': 'get'
-    'body': 'get ${1:prop}() {\n\treturn \n}'
+    'body': 'get ${1:prop}() {\n\treturn ${2:retvalue}\n}'
 
   'set':
     'prefix': 'set'
-    'body': 'set ${1:prop}(${2:value}) {\n\t\n}'
+    'body': 'set ${1:prop}(${2:value}) {\n\t${3:setcode}\n}'
 
   'namedFunction':
     'prefix': 'nfn'
-    'body': 'const ${1:functionName} = (${2:params}) => {\n\t\n}'
+    'body': 'const ${1:functionName} = (${2:params}) => {\n\t${3:code}\n}'
 
   'arrowFunctionOneParam':
     'prefix': 'arrp'
-    'body': '${1:param} => {\n\t\n}'
+    'body': '${1:param} => {\n\t${2:code}\n}'
 
   'arrowFunctionParams':
     'prefix': 'arrps'
-    'body': '(${1:params}) => {\n\t\n}'
+    'body': '(${1:params}) => {\n\t${2:code}\n}'
 
   'arrowFunctionNoParams':
     'prefix': 'arr'
@@ -80,15 +83,15 @@
 
   'forOf':
     'prefix': 'foro'
-    'body': 'for(let ${1:value} of ${2:iterable}) {\n\t\n}'
+    'body': 'for(let ${1:value} of ${2:iterable}) {\n\t${3:code}\n}'
 
   'forIn':
     'prefix': 'fori'
-    'body': 'for(let ${1:prop} in ${2:obj}) {\n\t\n}'
+    'body': 'for(let ${1:prop} in ${2:obj}) {\n\t${3:code}\n}'
 
   'generator':
     'prefix': 'gen'
-    'body': 'function* ${1:functionName}() {\n\t yield \n\t\n}\n'
+    'body': 'function* ${1:functionName}() {\n\t yield ${2:code} \n\t\n}\n'
   'newpromise':
     'prefix': 'newpromise'
-    'body': 'new Promise((resolve, reject) => {\n\t\n}'
+    'body': 'new Promise((resolve, reject) => {\n\t$1\n})'
