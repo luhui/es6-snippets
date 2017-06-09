@@ -23,20 +23,20 @@
 
   'exportFunction':
     'prefix': 'exf'
-    'body': 'export function ${1:functionName} () {\n\t\n}\n'
+    'body': 'export function ${1:functionName}() {\n\t\n}\n'
 
 
   'exportDefaultFunction':
     'prefix': 'exdf'
-    'body': 'export default function ${1:functionName} () {\n\t\n}\n'
+    'body': 'export default function ${1:functionName}() {\n\t\n}\n'
 
   'exportClass':
     'prefix': 'exc'
-    'body': 'export default class ${1:className} () {\n\t\n}\n'
+    'body': 'export default class ${1:className}() {\n\t\n}\n'
 
   'exportClassExtends':
     'prefix': 'exec'
-    'body': 'export default class ${1:className} extends ${2:baseClass} () {\n\t\n}\n'
+    'body': 'export default class ${1:className} extends ${2:baseClass}() {\n\t\n}\n'
 
   'constructor':
     'prefix': 'con'
@@ -88,7 +88,7 @@
 
   'generator':
     'prefix': 'gen'
-    'body': 'function* ${1:functionName} () {\n\t yield \n\t\n}\n'
+    'body': 'function* ${1:functionName}() {\n\t yield \n\t\n}\n'
   'newpromise':
     'prefix': 'newpromise'
     'body': 'new Promise((resolve, reject) => {\n\t\n}'
