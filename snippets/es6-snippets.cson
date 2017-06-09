@@ -89,3 +89,6 @@
   'generator':
     'prefix': 'gen'
     'body': 'function* ${1:functionName} () {\n\t yield \n\t\n}\n'
+  'newpromise':
+    'prefix': 'newpromise'
+    'body': 'new Promise((resolve, reject) => {\n\t\n}'
