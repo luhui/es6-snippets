@@ -10,7 +10,7 @@
 
   'importMember':
    'prefix': 'impm'
-   'body': 'import {${1:member}} from \'${2:module-name}\''
+   'body': 'import { ${1:member} } from \'${2:module-name}\''
 
   'importMemberAsAlias':
    'prefix': 'impmas'
@@ -22,16 +22,16 @@
 
   'exportFunction':
     'prefix': 'exf'
-    'body': 'export function ${1:functionName}() {\n\t${2:code}\n}\n'
+    'body': 'export function ${1:functionName}($2) {\n\t${3:code}\n}\n'
 
 
   'exportDefaultFunction':
     'prefix': 'exdf'
-    'body': 'export default function ${1:functionName}() {\n\t${2:code}\n}\n'
+    'body': 'export default function ${1:functionName}($2) {\n\t${3:code}\n}\n'
 
   'exportClass':
     'prefix': 'expc'
-    'body': 'export default class ${1:className}() {\n\t${2:code}\n}\n'
+    'body': 'export default class ${1:className}($2) {\n\t${3:code}\n}\n'
 
   'exportClassExtends':
     'prefix': 'expec'
@@ -40,6 +40,18 @@
   'exportReactClassExtends':
     'prefix': 'expreact'
     'body': 'export default class ${1:className} extends ${2:Component}() {\n\t${3:code}\n}\n'
+
+  'exportMember':
+    'prefix': 'expm'
+    'body': 'export const ${1:memberName}: ${2:flowType} = ${3:value}'
+
+  'exportGenerator':
+    'prefix': 'expg'
+    'body': 'export function* ${1:functionName}($2) {\n\t${3:code}\n}\n'
+
+  'exportDefaultGenerator':
+    'prefix': 'expdg'
+    'body': 'export default function* ${1:functionName}($2) {\n\t${3:code}\n}\n'
 
   'constructor':
     'prefix': 'con'
